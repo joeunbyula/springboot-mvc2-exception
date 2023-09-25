@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
 //어노테이션, 패키지, 클래스와 같은 대상을 정할 수 있다.
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "hello.exception.api")
 public class ExControllerAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
