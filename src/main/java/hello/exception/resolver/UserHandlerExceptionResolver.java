@@ -29,8 +29,8 @@ public class UserHandlerExceptionResolver implements HandlerExceptionResolver {
 
                 if ("application/json".equals(acceptHeader)) {
                     Map<String, Object> errorResult = new HashMap<>();
-                    errorResult.put("ex", ex.getClass());
-                    errorResult.put("message", ex.getMessage());
+                    errorResult.put("ex=", ex.getClass());
+                    errorResult.put("message=", ex.getMessage());
                     String result = objectMapper.writeValueAsString(errorResult);
 
                     response.setContentType("application/json");
